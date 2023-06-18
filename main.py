@@ -19,7 +19,6 @@ time.sleep(1)
 keyboard.press(Key.backspace)
 time.sleep(1)
 #Types spf: + given domain name into the searchbar and hits enter
-
 keyboard.type("spf:")
 time.sleep(1)
 keyboard.type(domain)
@@ -36,6 +35,7 @@ time.sleep(1)
 keyboard.type(domain + ".txt")
 time.sleep(1)
 keyboard.press(Key.enter)
+keyboard.release(Key.enter)
 time.sleep(10)
 #Searches file for any SPF Record
 #file1 = open(r"C:\Users\mabus\Desktop\spfrecords" + "\\" + f'{domain}.txt')
@@ -56,7 +56,6 @@ for l_no, line in enumerate(downloadedSPF):
         with open(r"C:\Users\mabus\Desktop\SPFfound.txt", 'a') as validSPF:
             validSPF.write(domain + "\n")
         break
-
 
 
 
